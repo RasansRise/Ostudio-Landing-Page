@@ -4,9 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ostudio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="icon" href="favicon.png">
   <style>
-    html, body { margin: 0; height: 100%; background: #fff; overflow: hidden; font-family: Arial, sans-serif; }
+    html, body { margin: 0; height: 100%; background: #f2f2f2; overflow: hidden; font-family: "Poppins", sans-serif; }
     .hero {
       position: relative;
       width: 100%;
@@ -31,16 +34,19 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap:20px;
+        gap:160px;
     }
     .logo {
-      max-width: 600px;
+      max-width: 400px;
       margin: 0;
       font-weight: 500;
     }
     @media(max-width:991px){
         .logo{
             max-width: 250px;
+        }
+        .content-container{
+            gap:20px;
         }
     }
     .btn {
@@ -55,6 +61,7 @@
       background: transparent;
       cursor: pointer;
       font-size: 20px;
+      font-weight: 100;
       transition: 0.3s;
       text-decoration: none;
     }
@@ -64,8 +71,9 @@
     }
     .desc {
       position: absolute;
-      bottom:200px;
+      bottom:50px;
       left:50%;
+      font-weight: 200;
       transform: translateX(-50%);
       text-align: center;
       font-size: 24px;
@@ -73,11 +81,14 @@
       opacity: .9;
       line-height: 1.4; 
       letter-spacing: -1px;
+      width: 100%;
+      font-style: italic;
     }
-
+    .desc span{
+        font-weight: 500;
+    }
     @media(max-width:991px){
         .desc{
-            bottom:300px;
             font-size:16px;
         }
         .btn{
@@ -86,11 +97,7 @@
     }
     @media(max-width:768px){
         .desc{
-            position: relative;
-            bottom:0;
-            left:0;
-            transform: unset;
-            margin-top:50px;
+
             font-size:14px;
         }
     }
@@ -103,14 +110,14 @@
     <div class="content">
       <div class="content-container">
         <img class="logo" src="logo.gif" />
-        <a href="https://ostudio.net" target="_blank"class="btn">Our old website →</a>
-        <div class="desc">
-            <b>We are evolving.</b> Our new website is taking shape.<br/>
-            A new digital home for ostudio is on the way!
-        </div>
+        <a href="https://ostudio.net" target="_blank"class="btn">View Archive →</a>
+        
       </div>
 
-     
+      <div class="desc">
+        Growing into something  <span>bigger. </span><br/>
+       We are rearranging our atoms. Something new is taking shape.
+    </div>
     </div>
   </div>
 
@@ -153,7 +160,7 @@
         const minSide = Math.min(W, H);
 
         // 0.47 = تقريباً 94% من القطر
-        const r = minSide * 0.47;
+        const r = minSide * 0.38;
 
         return r;
     }
