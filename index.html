@@ -34,7 +34,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap:160px;
+        gap:80px;
     }
     .logo {
       max-width: 400px;
@@ -61,7 +61,7 @@
       background: transparent;
       cursor: pointer;
       font-size: 20px;
-      font-weight: 100;
+      font-weight: 200;
       transition: 0.3s;
       text-decoration: none;
     }
@@ -71,9 +71,9 @@
     }
     .desc {
       position: absolute;
-      bottom:50px;
+      bottom:70px;
       left:50%;
-      font-weight: 200;
+      font-weight: 300;
       transform: translateX(-50%);
       text-align: center;
       font-size: 24px;
@@ -83,6 +83,7 @@
       letter-spacing: -1px;
       width: 100%;
       font-style: italic;
+      z-index: 5;
     }
     .desc span{
         font-weight: 500;
@@ -160,7 +161,7 @@
         const minSide = Math.min(W, H);
 
         // 0.47 = تقريباً 94% من القطر
-        const r = minSide * 0.38;
+        const r = minSide * 0.35;
 
         return r;
     }
